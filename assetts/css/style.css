@@ -1,3 +1,24 @@
-.jumbotron{
+.container{
     background-color: darkred;
+    font-family: 'Eczar', serif;
+    color:rgb(167, 28, 28);
+          
+}
+img{
+    text-align: center;
+}
+
+th{
+    background-color: black;
+    color: aliceblue;
+
+}
+.card-title{
+    background-color: black;
+    color: aliceblue;
+
+}
+.btn btn-primary{
+    background-color: darkgoldenrod;
+    color: black;
 }
