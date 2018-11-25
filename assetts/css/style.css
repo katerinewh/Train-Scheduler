@@ -1,17 +1,20 @@
 .container{
-    background-color: darkred;
-    font-family: 'Eczar', serif;
-    color:rgb(167, 28, 28);
+    background-color: black;
+    
+    position: relative;
+  padding-bottom: 15px;
+  padding-top: 15px;
+    
           
 }
-img{
-    text-align: center;
-}
+
 
 th{
+    
     background-color: black;
     color: aliceblue;
-
+        font-size: 20px;
+  
 }
 .card-title{
     background-color: black;
