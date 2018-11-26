@@ -1,9 +1,11 @@
 .container{
     background-color: black;
-    
     position: relative;
-  padding-bottom: 15px;
-  padding-top: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-family: 'Merriweather', serif;
+    font-size: 30px;
+    color: black;
     
           
 }
