@@ -1,5 +1,7 @@
-.<!DOCTYPE html>
+.
+<!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,65 +12,79 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="assetts/javascript/script.js"></script>
 </head>
+
+<style>
+    #train-table th,
+    td {
+      display: inline-block;
+      width: 16.575%;
+    }
+  </style>
+</head>
+
 <body>
     <div class="container">
-    <!-- add jumbotron header -->
-    <div class="jumbotron" style = "background-image: url(https://site.universalorlando.com/military/Images/BB_Hogwarts_Express_tcm55-43728.jpg); background-size: 75%; opacity: .85";>
-  <h1 class="display-4">All Aboard the Hogwarts Express</h1>
-  <p class="lead" id="subheader">Something wicked this way comes!</p>
-   </div>
-   <!-- add train schedule box -->
-<div class="display-data">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Current Train Schedule</h5>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Tain Name</th>
-                            <th scope="col">Destination</th>
-                            <th scope="col">Frequency (min)</th>
-                            <th scope="col">Next Arrival</th>
-                            <th scope="col">Minutes Away</th>
-                        </tr>
-                    </thead>
-                    <tbody id="tbody"></tbody>
-                </table>
+        <!-- add jumbotron header -->
+        <div class="jumbotron" style="background-image: url(https://site.universalorlando.com/military/Images/BB_Hogwarts_Express_tcm55-43728.jpg); background-size: 75%; opacity: .85"
+            ;>
+            <h1 class="display-4">All Aboard the Hogwarts Express</h1>
+            <p class="lead" id="subheader">Something wicked this way comes!</p>
+        </div>
+        <!-- add train schedule box -->
+        <div class="display-data">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Current Train Schedule</h5>
+                    <table class="table table-sm table-hover" id='train-table'>
+                        <thead>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tain Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                        <tbody id="tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- add train info -->
+        <div class="input-data">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Add Train</h5>
+                    <form>
+                        <div class="form-group">
+                            <label for="name-label">Train Name</label>
+                            <input type="text" class="form-control" id="name-input" aria-describedby="nameHelp"
+                                placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination-label">Destination</label>
+                            <input type="text" class="form-control" id="destination-input" placeholder="Destination">
+                        </div>
+                        <div class="form-group">
+                            <label for="time-label">First Train Time (HH:mm-military time)</label>
+                            <input type="text" min="01:00" max="24:00" required class="form-control" id="time-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="frequency-label">Frequency (min)</label>
+                            <input type="number" class="form-control" id="frequency-input">
+                        </div>
+                    </form>
+                    <div id="add-train-btn" color="black" class="btn btn-primary">Submit</div>
+                </div>
             </div>
         </div>
     </div>
-  <!-- add train info -->
-<div class="input-data">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Add Train</h5>
-                <form>
-                    <div class="form-group">
-                        <label for="name-label">Train Name</label>
-                        <input type="text" class="form-control" id="name-input" aria-describedby="nameHelp" placeholder="Enter name">
-                    </div>
-                    <div class="form-group">
-                        <label for="destination-label">Destination</label>
-                        <input type="text" class="form-control" id="destination-input" placeholder="Destination">
-                    </div>
-                    <div class="form-group">
-                        <label for="time-label">First Train Time (HH:mm-military time)</label>
-                        <input type="text" min="01:00" max="24:00" required class="form-control" id="time-input">
-                    </div>
-                    <div class="form-group">
-                        <label for="frequency-label">Frequency (min)</label>
-                        <input type="number" class="form-control" id="frequency-input" >
-                    </div>
-                </form>
-                <div id="add-train-btn" color= "black" class="btn btn-primary">Submit</div>
-            </div>
-        </div>
-    </div>
-</div>
 </body>
-</html>
 
+</html>

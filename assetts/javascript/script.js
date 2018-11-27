@@ -13,7 +13,7 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 //adding train name, destination, time, frequency
-$(document).on("click","#add-train-btn", function(event) {
+$(document).on("click", "#add-train-btn", function (event) {
   event.preventDefault();
 
   var train = $("#name-input").val().trim();
@@ -47,25 +47,48 @@ $(document).on("click","#add-train-btn", function(event) {
 
 // firebase
 database.ref().on("child_added", function (childSnapshot) {
+  console.log(childSnapshot.val());
+
+  // Store everything into a variable.
+  var train = childSnapshot.val().train;
+  var destination = childSnapshot.val().destination;
+  var time = childSnapshot.val().time;
+  var frequency = childSnapshot.val().frequency;
+
   //get current time
-var currentTime= moment();
+  var currentTime = moment();
   //get train start from the database
-  var trainStart= childSnapshot.val().time;
-      // Pushing the start time back 1 yr to ensure it comes before the current time
-var yearTime= moment(trainStart, "hh:mm").subtract(1, "years")
-    // calculate the difference between trainStart and curTime
-var timeDifference= moment().diff(moment(yearTime, "minutes"));
-        // calculate time apart
-var timeApart= timeDifference % childSnapshot.val().frequency;
-    // minutes until arrival
-    var minutesTillTrain=childSnapshot.val().frequency - timeApart;
-    //adding minutes until the train to the current time and formatting the appearance of the time
-    var nextArrival=moment().add(minutesTillTrain, "m").format("LT");
+  var trainStart = childSnapshot.val().time;
+  // Pushing the start time back 1 yr to ensure it comes before the current time
+  var yearTime = moment(trainStart, "hh:mm").subtract(1, "years")
+  // calculate the difference between trainStart and curTime
+  var timeDifference = moment().diff(moment(yearTime, "minutes"));
+  // calculate time apart
+  var timeApart = timeDifference % childSnapshot.val().frequency;
+  // minutes until arrival
+  var minutesTillTrain = childSnapshot.val().frequency - timeApart;
+  //adding minutes until the train to the current time and formatting the appearance of the time
+  var nextArrival = moment().add(minutesTillTrain, "m").format("LT");
+  // info
+  console.log(currentTime);
+  console.log(trainStart);
+  console.log(yearTime);
+  console.log(timeDifference);
+  console.log(timeApart);
+  console.log(minutesTillTrain);
+  console.log(nextArrival);
 
+  // add new row to on-screen table
 
-            // add new row to on-screen table
-$("#tbody").append(newRow)
-
-                // Handle the errors
+  var newRow = $("<tr>").append(
+    $("<td>").text(train),
+    $("<td>").text(destination),
+    $("<td>").text(time),
+    $("<td>").text(frequency),
+    $("<td>").text(minutesTillTrain),
+    $("<td>").text(nextArrival)
+  );
+  $("#train-table > tbody").append(newRow);
+  // Handle the errors
 
 });
