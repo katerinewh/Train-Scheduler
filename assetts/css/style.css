@@ -1,5 +1,5 @@
 .container{
-    background-color: black;
+    background-color: white;
     position: relative;
     padding-bottom: 15px;
     padding-top: 15px;
@@ -10,22 +10,22 @@
 }
 .jumbotron {
 
-    background-image: url(images/hogwarts\ 3.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%; 
+    background-image: url(images/hogwarts2.jpg);
+    padding-bottom: 50px;
+    background-size: 170%; 
+    background-repeat: round;
     border-bottom: 5px;
     padding: 10px;
-} 
-Can
-h1 {
-    background-size: 10%;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color:white;
- }
-#subheader{
+    font-size: 40px;
+} 
+
+
+/* #subheader{
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color:white; 
-}
+} */
 th{
     
     background-color: black;
