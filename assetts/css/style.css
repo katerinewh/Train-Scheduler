@@ -9,8 +9,14 @@
     
           
 }
-
-
+h1 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:white;
+ }
+#subheader{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color:white; 
+}
 th{
     
     background-color: black;

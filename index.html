@@ -9,15 +9,17 @@
     <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Merriweather:900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="assetts/javascript/script.js"></script>
 </head>
 <body>
     <div class="container">
     <!-- add jumbotron header -->
-    <div class="jumbotron"style = "background-image: url(https://site.universalorlando.com/military/Images/BB_Hogwarts_Express_tcm55-43728.jpg); background-size 75%;>
+    <div class="jumbotron" style = "background-image: url(https://site.universalorlando.com/military/Images/BB_Hogwarts_Express_tcm55-43728.jpg); background-size: 75%; opacity: .85";>
   <h1 class="display-4">All Aboard the Hogwarts Express</h1>
-  <p class="lead">Something wicked this way comes!</p>
+  <p class="lead" id="subheader">Something wicked this way comes!</p>
    </div>
    <!-- add train schedule box -->
 <div class="display-data">
@@ -59,25 +61,14 @@
                     </div>
                     <div class="form-group">
                         <label for="frequency-label">Frequency (min)</label>
-                        <input type="number" class="form-control" id="frequency-input" value="number">
+                        <input type="number" class="form-control" id="frequency-input" >
                     </div>
-                    <button type="submit" id="add-train-btn" color= "black" class="btn btn-primary">Submit</button>
                 </form>
+                <div id="add-train-btn" color= "black" class="btn btn-primary">Submit</div>
             </div>
         </div>
     </div>
 </div>
 </body>
 </html>
-© 2018 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
+
