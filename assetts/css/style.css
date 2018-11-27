@@ -6,10 +6,19 @@
     font-family: 'Merriweather', serif;
     font-size: 30px;
     color: black;
-    
-          
+         
 }
+.jumbotron {
+
+    background-image: url(images/hogwarts\ 3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    border-bottom: 5px;
+    padding: 10px;
+} 
+Can
 h1 {
+    background-size: 10%;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color:white;
  }
